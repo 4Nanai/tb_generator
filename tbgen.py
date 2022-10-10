@@ -46,7 +46,7 @@ class TestbenchGenerator(object):
         try:
             self.vfile = open(self.vfile_name, 'r')
             self.vcont = self.vfile.read() 
-        except Exception, e:
+        except Exception as e:
             print "ERROR:Open and read file error.\n ERROR:    %s" % e
             sys.exit(1)
             
@@ -63,7 +63,7 @@ class TestbenchGenerator(object):
             else:
                 self.ofile = open(ofile_name, 'w')
                 print "Output file is '%s'." % ofile_name
-        except Exception, e:
+        except Exception as e:
             print "ERROR:open and write output file error. \n ERROR:    %s" % e
             sys.exit(1)
                 
